@@ -1,0 +1,76 @@
+{
+  "problems": [
+    {
+      "problemNumber": 1,
+      "problemType": "multi-option",
+      "problemQuestion": "What is the red circle part?",
+      "imageFileName": "question1_image.png",
+      "options": [
+        "Seat tube",
+        "Head tube",
+        "Wheel",
+        "Chain"
+      ],
+      "correctAnswer": [
+        1
+      ],
+      "correctAnswer4Openend": ""
+    },
+    {
+      "problemNumber": 2,
+      "problemType": "click",
+      "problemQuestion": "Which is the correct way to wear the helmet?",
+      "imageFileName": "",
+      "options": [
+        "question2_option1.png",
+        "question2_option2.png"
+      ],
+      "correctAnswer": [
+        2
+      ],
+      "correctAnswer4Openend": ""
+    },
+    {
+      "problemNumber": 3,
+      "problemType": "open-end",
+      "problemQuestion": "Before you ride a bike, you should do an ABC BIKE CHECK of some important bike parts. A is for Air, B is for Bikes, and what does C stand for? Please write down the answer in the below blank.",
+      "imageFileName": "",
+      "options": [],
+      "correctAnswer": [],
+      "correctAnswer4Openend": "chain"
+    },
+    {
+      "problemNumber": 4,
+      "problemType": "RadioButton",
+      "problemQuestion": "Which place is not allowed to ride a bike?",
+      "imageFileName": "",
+      "options": [
+        "On campus",
+        "On sidewalk",
+        "Near house",
+        "Local road"
+      ],
+      "correctAnswer": [
+        2
+      ],
+      "correctAnswer4Openend": ""
+    },
+    {
+      "problemNumber": 5,
+      "problemType": "checkbox",
+      "problemQuestion": "Choose all items that we need for riding a bike.",
+      "imageFileName": "",
+      "options": [
+        "Big back",
+        "Helmet",
+        "Sunglasses",
+        "Light"
+      ],
+      "correctAnswer": [
+        2,
+        4
+      ],
+      "correctAnswer4Openend": ""
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BikeSafetyQuizApp</string>
+    <string name="main_title">Bike Safety\nQuiz App</string>
+    <string name="name_holder">Type your name</string>
+    <string name="start_button">START</string>
+    <string name="submit_button">SUBMIT</string>
+    <string name="choose_menu">Choose Your Activity</string>
+    <string name="user_name">User Name</string>
+    <string name="quiz_icon_text">Quiz</string>
+    <string name="view_result_icon_text">View Result</string>
+    <string name="ok_button">OK</string>
+    <string name="congratulation">Congratulations!</string>
+    <string name="solve_again_button">Solve Again</string>
+    <string name="go_home_button">Go Dashboard</string>
+    <string name="go_start_button">Go Home</string>
+    <string name="score_board">Score Board</string>
+</resources>
