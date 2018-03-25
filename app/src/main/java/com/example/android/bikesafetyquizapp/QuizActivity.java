@@ -75,6 +75,7 @@ public class QuizActivity extends Activity implements View.OnClickListener  {
 
     boolean resultArray[] = new boolean[5]; // save the result. 0: incorrect, 1: correct
     float questionNumberSize = 20;
+    boolean isCorrect = false;
 
     // Multiple option question
     boolean buttonSelectionArray[] = new boolean[4]; // for the multiple option question
@@ -136,8 +137,15 @@ public class QuizActivity extends Activity implements View.OnClickListener  {
             ImageView image = new ImageView(this);
 
             if (i < currentProblemNumber) {
-                image.setBackgroundResource(R.drawable.progress_done);
+
+                if (resultArray[i] == true) {
+                    image.setBackgroundResource(R.drawable.progress_done);
+                } else {
+                    image.setBackgroundResource(R.drawable.progress_wrong);
+                }
+
                 image.setLayoutParams(lp);
+
             } else if (i == currentProblemNumber) {
                 image.setBackgroundResource(R.drawable.progress_on);
             } else {
@@ -628,7 +636,9 @@ public class QuizActivity extends Activity implements View.OnClickListener  {
 
     public void clickSubmitButton(View view) {
 
-        if (checkCurrentAnswer() == true) { // correct
+        isCorrect = checkCurrentAnswer();
+
+        if (isCorrect == true) { // correct
             showImage(true);
         } else { // incorrect
             showImage(false);

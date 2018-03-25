@@ -14,4 +14,8 @@
     <string name="go_home_button">Go Dashboard</string>
     <string name="go_start_button">Go Home</string>
     <string name="score_board">Score Board</string>
+    <string name="correct_answer_word">Good job!</string>
+    <string name="correct_answer">Correct answer</string>
+    <string name="wrong_answer">Wrong answer</string>
+    <string name="wrong_answer_word">Oops!</string>
 </resources>

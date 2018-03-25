@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
-        android:text="Good Job!"
+        android:text="@string/correct_answer_word"
         android:textColor="@color/bgGreen"
         android:textSize="30dp"
         android:textStyle="bold"/>
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="Correct answer"
+        android:text="@string/correct_answer"
         android:textColor="@color/userNameColor"
         android:textSize="30dp"/>
 

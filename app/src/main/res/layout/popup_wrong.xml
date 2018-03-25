@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
-        android:text="Opps!"
+        android:text="@string/wrong_answer_word"
         android:textColor="@color/fontRed"
         android:textSize="30dp"
         android:textStyle="bold"/>
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="Wrong answer"
+        android:text="@string/wrong_answer"
         android:textColor="@color/userNameColor"
         android:textSize="30dp"/>
 
