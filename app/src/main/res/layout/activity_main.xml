@@ -3,9 +3,11 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     android:background="@drawable/main_background"
+    android:scaleType="centerCrop"
     android:fillViewport="true"
     android:scrollbarStyle="insideInset"
     android:scrollbars="vertical">
@@ -13,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
+        android:gravity="center"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -22,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif"
             android:text="@string/main_title"
             android:textColor="#F4F8F5  "
@@ -45,7 +47,8 @@
             android:fontFamily="sans-serif"
             android:hint="@string/name_holder"
             android:inputType="text"
-            android:textColor="@android:color/white"></EditText>
+            android:textColor="@android:color/white">
+        </EditText>
 
         <Button
             android:id="@+id/startButton"

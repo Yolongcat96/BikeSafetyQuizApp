@@ -2,8 +2,9 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     android:background="@drawable/main_background"
     android:fillViewport="true"
     android:scrollbarStyle="insideInset"
@@ -11,9 +12,9 @@
 
     <LinearLayout
         android:id="@+id/mainScoreBoardLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
         tools:context=".ShowScoreBoard">
 
@@ -56,8 +57,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:src="@drawable/winner_bar" />
 
             <TextView
@@ -76,7 +75,7 @@
                 android:id="@+id/scoreTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="280dp"
+                android:layout_marginLeft="300dp"
                 android:layout_marginTop="50dp"
                 android:text="0/5"
                 android:textAlignment="center"
@@ -90,8 +89,7 @@
             android:id="@+id/normalBoardLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-        </LinearLayout>
+            android:orientation="vertical"></LinearLayout>
 
         <Button
             android:id="@+id/goHomeButton"
@@ -99,13 +97,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/rounded_button"
             android:onClick="goHome"
             android:text="@string/go_home_button"
+            android:textAllCaps="false"
             android:textColor="@color/bgGreen"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAllCaps="false"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>

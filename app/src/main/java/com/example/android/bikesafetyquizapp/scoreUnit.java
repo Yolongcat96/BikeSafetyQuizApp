@@ -9,8 +9,7 @@ public class scoreUnit {
     public String userName;
     public int numCorrectAnswer;
 
-
-    public void createScoreUnit (String userName, int numCorrectAnswer) {
+    public void createScoreUnit(String userName, int numCorrectAnswer) {
         this.userName = userName;
         this.numCorrectAnswer = numCorrectAnswer;
     }

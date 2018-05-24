@@ -18,13 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--Add Other activities like this-->
-        <activity android:name=".DashboardActivity" />
 
         <!--Add the Quiz Activity -->
         <activity android:name=".QuizActivity" />
         <activity android:name=".showCurrentResult" />
         <activity android:name=".ShowScoreBoard" />
+        <activity android:name=".DashboardActivity" />
 
     </application>
 

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/main_background"
     android:fillViewport="true"
     android:scrollbarStyle="insideInset"
     android:scrollbars="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
         tools:context=".QuizActivity">
 
@@ -39,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/congratulation"
+            android:text="@string/greatjob"
             android:textColor="@android:color/white"
             android:textSize="40sp" />
 
@@ -60,10 +59,10 @@
             android:background="@drawable/gohome_button"
             android:onClick="solveAgain"
             android:text="@string/solve_again_button"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAllCaps="false"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/goHomeButton"
@@ -74,10 +73,10 @@
             android:background="@drawable/rounded_button"
             android:onClick="goHome"
             android:text="@string/go_home_button"
+            android:textAllCaps="false"
             android:textColor="@color/bgGreen"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAllCaps="false"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>

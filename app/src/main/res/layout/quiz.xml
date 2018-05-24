@@ -2,19 +2,19 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".QuizActivity"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@drawable/main_background"
     android:fillViewport="true"
     android:scrollbarStyle="insideInset"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    tools:context=".QuizActivity">
 
     <RelativeLayout
         android:id="@+id/quizMainLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:gravity="center"
         android:orientation="vertical">
 
         <FrameLayout
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp">
+            android:layout_margin="10dp">
 
             <ImageView
                 android:id="@+id/titleBarImageView"
@@ -55,11 +55,10 @@
                 android:id="@+id/progressbarLayout"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/userNameView2"
                 android:layout_marginLeft="180dp"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-            </LinearLayout>
+                android:layout_toRightOf="@id/userNameView2"
+                android:orientation="horizontal"></LinearLayout>
 
         </FrameLayout>
 
@@ -68,25 +67,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quizTitlebarLayout"
-            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
             android:layout_margin="10dp">
 
             <ImageView
                 android:id="@+id/mainQuestionImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:background="@drawable/question_bg" />
+                android:layout_centerInParent="true"
+                android:background="@drawable/question_bg"
+                android:scaleType="centerCrop"/>
 
         </FrameLayout>
 
         <LinearLayout
             android:id="@+id/optionViewLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quizShowLayout"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -109,8 +109,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/optionViewLayout"
-            android:layout_margin="10dp"
             android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
             android:background="@drawable/submit_button"
             android:onClick="clickSubmitButton"
             android:text="@string/submit_button"
