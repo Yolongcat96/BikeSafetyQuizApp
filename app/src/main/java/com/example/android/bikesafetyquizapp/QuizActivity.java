@@ -233,7 +233,7 @@ public class QuizActivity extends Activity implements View.OnClickListener {
         LinearLayout.LayoutParams checkParams = new LinearLayout.LayoutParams(
                 LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         checkParams.setMargins(40, 20, 0, 0);
-        checkParams.gravity = Gravity.LEFT;
+        checkParams.gravity = Gravity.CENTER_VERTICAL;
         for (int i = 0; i < 4; i++) {
             CheckBox checkBox = new CheckBox(this);
             checkBox.setId(i + 100);
@@ -269,12 +269,12 @@ public class QuizActivity extends Activity implements View.OnClickListener {
         // add option view layout
         optionViewLayout = (LinearLayout) findViewById(R.id.optionViewLayout);
         optionViewLayout.setBackgroundResource(R.drawable.question_bg1);
-        optionViewLayout.setGravity(Gravity.CENTER_HORIZONTAL);
+        optionViewLayout.setOrientation(LinearLayout.VERTICAL);
         optionViewLayout.getLayoutParams().width = questionBackgroundWidth;
         optionViewLayout.getLayoutParams().height = (int) (questionBackgroundHeight * 0.8);
         RadioGroup radiogroup = new RadioGroup(this);
         LinearLayout.LayoutParams radiogroupparams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
         radiogroupparams.setMargins(10, 10, 10, 10);
         radiogroup.setLayoutParams(radiogroupparams);
