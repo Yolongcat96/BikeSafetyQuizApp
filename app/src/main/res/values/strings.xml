@@ -18,4 +18,5 @@
     <string name="correct_answer">Correct answer</string>
     <string name="wrong_answer">Wrong answer</string>
     <string name="wrong_answer_word">Oops!</string>
+    <string name="reference_link">Reference: http://bikeleague.org/</string>
 </resources>

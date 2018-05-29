@@ -10,11 +10,15 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.app.AlertDialog;
 
@@ -28,6 +32,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         // Set content view
         setContentView(R.layout.activity_main);
+
+        // make the link
+        setLink();
+    }
+
+    public void setLink() {
+        TextView linkTextView = (TextView) findViewById(R.id.referenceTextView);
+        Linkify.addLinks(linkTextView, Linkify.ALL);
     }
 
     // receive the user input from the edit text view at the main view

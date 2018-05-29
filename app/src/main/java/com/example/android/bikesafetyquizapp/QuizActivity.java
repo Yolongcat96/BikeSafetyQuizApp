@@ -502,17 +502,29 @@ public class QuizActivity extends Activity implements View.OnClickListener {
 
     }
 
+    private boolean checkIthasstring(String word)  {
+
+        if (currentQuestionUnit.correctAnswer4Openend.toLowerCase().contains(word.toLowerCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // This function is called when clicking the "SUBMIT" button
     public boolean checkCurrentAnswer() {
         boolean re_value = true;
         if (currentProblemNumber == 2) { // check currentAnswer (open-end question)
             currentAnswer = editText.getText().toString();
             Log.d("CheckAnswer(Open-end)", currentAnswer + "," + currentQuestionUnit.correctAnswer4Openend);
-            if (currentAnswer.equalsIgnoreCase(currentQuestionUnit.correctAnswer4Openend)) {
-                re_value = true;
-            } else {
-                re_value = false;
-            }
+//            if (currentAnswer.equalsIgnoreCase(currentQuestionUnit.correctAnswer4Openend)) {
+//                re_value = true;
+//            } else {
+//                re_value = false;
+//            }
+
+            re_value = checkIthasstring(currentAnswer);
+
         } else if (currentProblemNumber == 3) { // radio button
             re_value = checkRadioButtonAnswer();
 

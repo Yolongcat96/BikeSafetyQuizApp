@@ -63,6 +63,17 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/referenceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/reference_link"
+            android:linksClickable="true"
+            android:textColor="#F4F8F5"
+            android:textSize="14sp" />
 
     </LinearLayout>
 </ScrollView>
