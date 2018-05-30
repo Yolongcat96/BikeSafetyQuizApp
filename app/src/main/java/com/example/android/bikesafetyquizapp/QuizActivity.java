@@ -502,28 +502,17 @@ public class QuizActivity extends Activity implements View.OnClickListener {
 
     }
 
-    private boolean checkIthasstring(String word)  {
-
-        if (currentQuestionUnit.correctAnswer4Openend.toLowerCase().contains(word.toLowerCase())) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     // This function is called when clicking the "SUBMIT" button
     public boolean checkCurrentAnswer() {
         boolean re_value = true;
         if (currentProblemNumber == 2) { // check currentAnswer (open-end question)
             currentAnswer = editText.getText().toString();
             Log.d("CheckAnswer(Open-end)", currentAnswer + "," + currentQuestionUnit.correctAnswer4Openend);
-//            if (currentAnswer.equalsIgnoreCase(currentQuestionUnit.correctAnswer4Openend)) {
-//                re_value = true;
-//            } else {
-//                re_value = false;
-//            }
-
-            re_value = checkIthasstring(currentAnswer);
+            if (currentAnswer.equalsIgnoreCase(currentQuestionUnit.correctAnswer4Openend)) {
+                re_value = true;
+            } else {
+                re_value = false;
+            }
 
         } else if (currentProblemNumber == 3) { // radio button
             re_value = checkRadioButtonAnswer();
@@ -556,19 +545,29 @@ public class QuizActivity extends Activity implements View.OnClickListener {
     }
 
     public boolean checkCheckBoxAnswer() {
+        int numAnswered = 0;
         // convert the checkbox into the current currentAnswerNumber
         int answerIndex = 0;
         for (int i = 0; i < cBoxArray.length; i++) {
             CheckBox currBox = cBoxArray[i];
-            Log.d("Check the answer", "checked?" + currBox.isChecked());
-            if (currBox.isChecked()) {
+            if (currBox.isChecked() == true) {
+                Log.d("Check the answer", "checked????" + currBox.isChecked());
                 currentAnswerNumber[answerIndex] = i + 1;
                 answerIndex++;
+                numAnswered++;
             }
         }
-        for (int i = 0; i < currentQuestionUnit.correctAnswerArray.length; i++) {
-            if (currentQuestionUnit.correctAnswerArray[i] != currentAnswerNumber[i]) return false;
+        
+        // check the correct answer in case of answering the question
+        if (numAnswered > 0) {
+            for (int i = 0; i < currentQuestionUnit.correctAnswerArray.length; i++) {
+                if (currentQuestionUnit.correctAnswerArray[i] != currentAnswerNumber[i])
+                    return false;
+            }
+        } else {
+            return false;
         }
+
         return true;
     }
 
@@ -651,6 +650,7 @@ public class QuizActivity extends Activity implements View.OnClickListener {
             for (int i = 0; i < 4; i++) {
                 buttonArray[i] = null;
             }
+
             if (currentProblemNumber == 3) {
                 editText.setVisibility(EditText.GONE);
             } else if (currentProblemNumber == 4) {

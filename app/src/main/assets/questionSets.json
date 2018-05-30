@@ -33,11 +33,11 @@
     {
       "problemNumber": 3,
       "problemType": "open-end",
-      "problemQuestion": "Before you ride a bike, you should do an ABC BIKE CHECK of some important bike parts. A is for Air, B is for Brakes, and what does C stand for? Please write down the answer in the below blank.",
+      "problemQuestion": "Before you ride a bike, you should do an ABC BIKE CHECK of some important bike parts. A is for (   ), B is for Brakes, and C is for chain, cranks, and cassette. What does A stand for? Please write down the answer in the below blank.",
       "imageFileName": "",
       "options": [],
       "correctAnswer": [],
-      "correctAnswer4Openend": "chain, cranks, cassette"
+      "correctAnswer4Openend": "Air"
     },
     {
       "problemNumber": 4,
