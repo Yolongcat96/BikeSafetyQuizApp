@@ -27,7 +27,7 @@ public class DashboardActivity extends Activity {
         quizIconImageView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 callQuizActivity();
-                Log.v("QuizApp", "Quiz icon is clicked.");
+                Log.v("QuizApp", getString(R.string.logv_message_quiz));
             }
         });
         // set the touch event listener to the view result icon
@@ -35,7 +35,7 @@ public class DashboardActivity extends Activity {
         viewResultIconImageView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 callScoreQuizActivity();
-                Log.v("QuizApp", "View Result icon is clicked.");
+                Log.v("QuizApp", getString(R.string.logv_message_result));
             }
         });
     }
@@ -44,7 +44,7 @@ public class DashboardActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             currentUserName = extras.getString("user_name");
-            Log.v("(QuizApp)", "(receiveDataFromMainActivity) user name: " + currentUserName);
+            Log.v("(QuizApp)", getString(R.string.logv_message_username) + currentUserName);
         }
 
     }

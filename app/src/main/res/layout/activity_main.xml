@@ -10,14 +10,17 @@
     android:scaleType="centerCrop"
     android:fillViewport="true"
     android:scrollbarStyle="insideInset"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/titleTextView"

@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
         // get user name
         final EditText nameText = (EditText) findViewById(R.id.enterName);
         if (nameText != null) {
-            userName = nameText.getText().toString();
+            userName = nameText.getText().toString().trim();
         }
         return userName;
     }
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
     // when click this button, it moves the user to the dashboard
     public void startButton(View view) {
         // check the user name is typed
-        if (getUserName().equals("")) {
+        if (getUserName().equalsIgnoreCase("")) {
             showWarning();
         } else {
             // call dashboard activity

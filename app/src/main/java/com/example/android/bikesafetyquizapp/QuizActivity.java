@@ -557,7 +557,6 @@ public class QuizActivity extends Activity implements View.OnClickListener {
                 numAnswered++;
             }
         }
-        
         // check the correct answer in case of answering the question
         if (numAnswered > 0) {
             for (int i = 0; i < currentQuestionUnit.correctAnswerArray.length; i++) {
@@ -567,7 +566,6 @@ public class QuizActivity extends Activity implements View.OnClickListener {
         } else {
             return false;
         }
-
         return true;
     }
 
@@ -650,7 +648,6 @@ public class QuizActivity extends Activity implements View.OnClickListener {
             for (int i = 0; i < 4; i++) {
                 buttonArray[i] = null;
             }
-
             if (currentProblemNumber == 3) {
                 editText.setVisibility(EditText.GONE);
             } else if (currentProblemNumber == 4) {

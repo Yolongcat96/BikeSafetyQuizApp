@@ -19,4 +19,9 @@
     <string name="wrong_answer">Wrong answer</string>
     <string name="wrong_answer_word">Oops!</string>
     <string name="reference_link">Reference: http://bikeleague.org/</string>
+    <string name="initial_score">0/5</string>
+    <string name="not_applicable">N/A</string>
+    <string name="logv_message_quiz">Quiz icon is clicked.</string>
+    <string name="logv_message_result">View Result icon is clicked.</string>
+    <string name="logv_message_username">(receiveDataFromMainActivity) user name: </string>
 </resources>
